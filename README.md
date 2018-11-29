@@ -11,3 +11,5 @@ Run the following command
 
     docker run -d --name fbg --restart on-failure  -p 5001:80 -e username="test_user" -e password="test_password" -v $(pwd)/pages.json:/app/pages.json individuwill/fbg
 
+
+Access the server now from your docker machine via the port mapped (5001 by default) https://your_server:5001/
