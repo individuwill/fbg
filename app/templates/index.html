@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Footballguys parsed pages</title>
+  </head>
+  <body>
+    <h1>Footballguys parsed pages</h1>
+    <table>
+      <tr>
+        <th>Index</th>
+        <th>Table Class</th>
+        <th>URL</th>
+      </tr>
+      {% for page in pages %}
+      <tr>
+        <td>{{loop.index}}</td>
+        <td>{{page['class']}}</td>
+        <td><a href="/page/{{loop.index}}">{{page['url']}}</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
