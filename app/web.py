@@ -31,5 +31,10 @@ def page(num):
 def debug():
     return str(os.environ)
 
+@app.route("/custom/<string:class_>/<path:url>")
+def custom(class_, url):
+    table = fbgs.retrieve_table(url, class_)
+    return render_template("page.html", table=table)
+
 if __name__ == "__main__":
     app.run(debug=True)
